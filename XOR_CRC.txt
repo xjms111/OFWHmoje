@@ -1,4 +1,4 @@
-Wynik operacji bitowej xor na s1 i s2 (r12) obejmuje wszystkie możliwe kombinacje s1 i kompatybilnych odpowiednikó s2, które dają r12. W rezultacie odwrócenie procesu i uzyskanie r12 jest łatwe i prowadzi do kolizji (mnogości możliwych odpowiedzi).
+Wynik operacji bitowej xor na s1 i s2 (r12) obejmuje wszystkie możliwe kombinacje s1 i kompatybilnych odpowiedników s2, które dają r12. W rezultacie odwrócenie procesu i uzyskanie r12 jest łatwe i prowadzi do kolizji (mnogości możliwych odpowiedzi).
 
 Aby rozwiązać problem nadmiernych kolizji używamy kodów wykrywania błędów (CRC, Hamminga, Reeda - Salomona i Goppy). Dla każdego s1 wprowadzamy kod wykrywania błędów edc1. Wtedy r12 liczymy r12 = (s₁ ∘ edc(s₁)) ⊕ (edc(s₂) ∘ s₂)
 Gdzie ∘ to konkadanacja (np. s1=101, edc=001 s1∘edc=101001). Dla uproszczenia |s1|=|s2|=|edc(s1)|=edc(s2)|
@@ -6,3 +6,4 @@ Gdzie ∘ to konkadanacja (np. s1=101, edc=001 s1∘edc=101001). Dla uproszczeni
 Później autorzy udowadniają, że bez użycia permutacji, zastosowaie xora może być odwrócone w czasie wielomianowym, ale czy warto to pisać? Ważne, że tak jest xd
 
 I z tego powodu konieczne jest użycie permutacji. [tu już się chyba kończy moja działka?]
+
